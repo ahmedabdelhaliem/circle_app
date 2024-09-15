@@ -13,4 +13,6 @@ abstract class Styles {
       );
   static const textStyle14 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.normal, fontFamily: kMadaniArabic);
+  static const textStyle21 = TextStyle(
+      fontSize: 21, fontWeight: FontWeight.w600, fontFamily: kMadaniArabic);
 }
