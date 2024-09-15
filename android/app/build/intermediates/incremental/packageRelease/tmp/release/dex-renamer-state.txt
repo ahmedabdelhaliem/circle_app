@@ -1,0 +1,4 @@
+#Wed Sep 11 14:24:11 EEST 2024
+base.0=C\:\\Users\\Abdelhaliem\\StudioProjects\\circle\\android\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

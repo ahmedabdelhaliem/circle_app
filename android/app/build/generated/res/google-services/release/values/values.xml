@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">886715113572</string>
+    <string name="google_api_key" translatable="false">AIzaSyBCw7nKzingBrJgXG4XCbiZj5ld2Wer5bM</string>
+    <string name="google_app_id" translatable="false">1:886715113572:android:03b42ff3b03787d51e3f71</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBCw7nKzingBrJgXG4XCbiZj5ld2Wer5bM</string>
+    <string name="google_storage_bucket" translatable="false">circle-app-d5211.appspot.com</string>
+    <string name="project_id" translatable="false">circle-app-d5211</string>
+</resources>
