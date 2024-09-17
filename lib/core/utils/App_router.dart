@@ -1,3 +1,4 @@
+import 'package:circle/feature/category/presentation/view/category_view.dart';
 import 'package:circle/feature/home/presentation/views/home_view.dart';
 import 'package:circle/feature/loggin/presentation/views/loggin_view.dart';
 import 'package:circle/feature/loggin/presentation/views/otp_view.dart';
@@ -13,6 +14,7 @@ abstract class AppRouter {
   static const kOtpView = '/otpView';
   static const kSignUp = '/signUp';
   static const kProfile = '/Profile';
+  static const kCategory = '/kCategory';
   static final GoRouter router = GoRouter(routes: <RouteBase>[
     GoRoute(
       path: '/',
@@ -24,6 +26,12 @@ abstract class AppRouter {
       path: kLoginView,
       builder: (BuildContext context, GoRouterState state) {
         return const LogginView();
+      },
+    ),
+    GoRoute(
+      path: kCategory,
+      builder: (BuildContext context, GoRouterState state) {
+        return const CategoryView();
       },
     ),
     GoRoute(

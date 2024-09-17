@@ -17,4 +17,5 @@ class Assets {
   static const headPhone = 'assets/images/headPhone.png';
   static const userpen = 'assets/images/user-pen 1.png';
   static const delete = 'assets/images/delete.png';
+  static const categories = 'assets/images/categories.png';
 }
