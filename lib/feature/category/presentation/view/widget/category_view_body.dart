@@ -1,6 +1,6 @@
-import 'package:circle/feature/category/presentation/view/widget/custom_category_section.dart';
 import 'package:circle/feature/category/presentation/view/widget/custom_category_section_list_view.dart';
 import 'package:circle/feature/category/presentation/view/widget/descrapition_category.dart';
+import 'package:circle/feature/category/presentation/view/widget/list_view_des_cat.dart';
 import 'package:flutter/material.dart';
 
 class CategoryViewBody extends StatelessWidget {
@@ -8,19 +8,15 @@ class CategoryViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          child: const Column(
-            children: [CustomCategorySectionListView()],
-          ),
-        ),
-        Container(
-          child: const Column(
-            children: [DescrapitionCategory(text: 'milk')],
-          ),
-        ),
-      ],
+    return const Padding(
+      padding: EdgeInsets.only(left: 16, top: 14),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomCategorySectionListView(),
+          ListViewDesCat(),
+        ],
+      ),
     );
   }
 }

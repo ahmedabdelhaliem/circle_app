@@ -6,6 +6,13 @@ class CategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: CategoryViewBody());
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text('الاقسام'),
+      ),
+      body: const CategoryViewBody(),
+      backgroundColor: Colors.white,
+    );
   }
 }

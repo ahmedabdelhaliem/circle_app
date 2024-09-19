@@ -1,35 +1,40 @@
 import 'package:circle/core/utils/assets.dart';
-import 'package:circle/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomCategorySection extends StatelessWidget {
+class CustomCategorySection extends StatefulWidget {
   const CustomCategorySection({super.key});
+
+  @override
+  _CustomCategorySectionState createState() => _CustomCategorySectionState();
+}
+
+class _CustomCategorySectionState extends State<CustomCategorySection> {
+  bool _isTapped = false; // حالة لتحديد ما إذا تم الضغط على العنصر
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        setState(() {
+          _isTapped = !_isTapped; // تغيير الحالة عند الضغط على العنصر
+        });
+      },
       child: Column(
-        mainAxisSize: MainAxisSize.min, // لتصغير الحجم بحيث يناسب المحتويات
         children: [
-          SizedBox(
-            height: 110,
+          Container(
             width: 78,
-            child: Column(
-              children: [
-                Image.asset(
-                  Assets.icon, // مسار الصورة
-                  width: 50, // تحديد عرض الصورة
-                  height: 50, // تحديد ارتفاع الصورة
-                  fit: BoxFit.cover, // لضبط طريقة عرض الصورة
-                ),
-                const SizedBox(height: 10), // إضافة مسافة بين الصورة والنص
-
-                const Text(
-                  'منتجات\nالعناية', // النص مع فاصل سطر لجعل الكلمات فوق بعضها البعض
-                  textAlign: TextAlign.center, // لجعل النص في المنتصف
-                  style: Styles.textStyle16,
-                ),
-              ],
+            height: 110,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: _isTapped
+                  ? Colors.red
+                  : Colors.transparent, // تغيير اللون عند الضغط
+            ),
+            child: Image.asset(
+              Assets.categories, // مسار الصورة
+              width: 78, // تحديد عرض الصورة
+              height: 110, // تحديد ارتفاع الصورة
+              fit: BoxFit.fill, // لضبط طريقة عرض الصورة
             ),
           ),
         ],

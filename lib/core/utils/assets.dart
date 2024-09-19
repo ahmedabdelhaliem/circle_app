@@ -18,4 +18,5 @@ class Assets {
   static const userpen = 'assets/images/user-pen 1.png';
   static const delete = 'assets/images/delete.png';
   static const categories = 'assets/images/categories.png';
+  static const tools = 'assets/images/Rectangle 1547 (6).png';
 }
