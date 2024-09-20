@@ -1,5 +1,8 @@
-import 'package:circle/feature/products/presentation/view/widgets/all_productes.dart';
+import 'package:circle/feature/products/presentation/view/widgets/List_View_des_product.dart';
+import 'package:circle/feature/products/presentation/view/widgets/category_section.dart';
 import 'package:circle/feature/products/presentation/view/widgets/custom_search_text_feild.dart';
+import 'package:circle/feature/products/presentation/view/widgets/element_product_grad_view.dart';
+import 'package:circle/feature/products/presentation/view/widgets/list_view_all_products.dart';
 import 'package:flutter/material.dart';
 
 class ProductesViewBody extends StatelessWidget {
@@ -7,14 +10,15 @@ class ProductesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      child: Column(
-        children: [
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      child: ListView(
+        children: const [
           CustomSearchTextFeild(),
-          AllProductes(
-            text: 'منتجات الالبان',
-          )
+          ListViewAllProducts(),
+          ListViewDesProduct(),
+          Spacer(),
+          ElementProductGradView()
         ],
       ),
     );

@@ -19,4 +19,6 @@ class Assets {
   static const delete = 'assets/images/delete.png';
   static const categories = 'assets/images/categories.png';
   static const tools = 'assets/images/Rectangle 1547 (6).png';
+  static const product =
+      'assets/images/png-clipart-coffee-cup-cafe-cappuccino-espresso-coffee-lid-coffee.png';
 }

@@ -3,6 +3,7 @@ import 'package:circle/feature/home/presentation/views/home_view.dart';
 import 'package:circle/feature/loggin/presentation/views/loggin_view.dart';
 import 'package:circle/feature/loggin/presentation/views/otp_view.dart';
 import 'package:circle/feature/loggin/presentation/views/sing_up_view.dart';
+import 'package:circle/feature/products/presentation/view/details_product.dart';
 import 'package:circle/feature/products/presentation/view/productes_view.dart';
 import 'package:circle/feature/profile/presentation/view/profile_view.dart';
 import 'package:circle/feature/splash/presentation/views/splash_view.dart';
@@ -17,6 +18,7 @@ abstract class AppRouter {
   static const kProfile = '/Profile';
   static const kCategory = '/kCategory';
   static const kProductesView = '/kProductesView';
+  static const kDetailsProduct = '/kDetailsProduct';
   static final GoRouter router = GoRouter(routes: <RouteBase>[
     GoRoute(
       path: '/',
@@ -40,6 +42,12 @@ abstract class AppRouter {
       path: kHomeView,
       builder: (BuildContext context, GoRouterState state) {
         return const HomeView();
+      },
+    ),
+    GoRoute(
+      path: kDetailsProduct,
+      builder: (BuildContext context, GoRouterState state) {
+        return const DetailsProduct();
       },
     ),
     GoRoute(

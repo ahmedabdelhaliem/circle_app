@@ -7,31 +7,34 @@ class ListViewAllProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 4,
-      itemBuilder: (BuildContext context, int index) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Container(
-            height: 40,
-            width: 129,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: const Color(0xffFDF4F4),
-            ),
-            child: index == 0
-                ? const Center(
-                    child: Text(
-                      'الكل',
-                      style: Styles.textStyle12,
+    return SizedBox(
+      height: 56,
+      child: ListView.builder(
+        itemCount: 5,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (BuildContext context, int index) {
+          if (index == 0) {
+            return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Container(
+                    height: 40,
+                    width: 129,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: const Color(0xffFDF4F4),
                     ),
-                  )
-                : const AllProductes(
-                    text: 'AllProductes',
-                  ),
-          ),
-        );
-      },
+                    child: const Center(
+                      child: Text(
+                        'الكل',
+                        style: Styles.textStyle12,
+                      ),
+                    )));
+          }
+          return const Padding(
+              padding: EdgeInsets.symmetric(vertical: 8),
+              child: AllProductes(text: 'منتحات الالبان'));
+        },
+      ),
     );
   }
 }
