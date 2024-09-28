@@ -16,6 +16,3 @@ class OTPView extends StatelessWidget {
 }
 
 // وظيفة لبدء المؤقت
-  
-
-  
