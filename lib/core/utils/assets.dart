@@ -21,4 +21,6 @@ class Assets {
   static const tools = 'assets/images/Rectangle 1547 (6).png';
   static const product =
       'assets/images/png-clipart-coffee-cup-cafe-cappuccino-espresso-coffee-lid-coffee.png';
+  static const price = 'assets/images/price.png';
+  static const basket = 'assets/images/Outline.png';
 }

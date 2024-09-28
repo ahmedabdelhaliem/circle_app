@@ -1,6 +1,8 @@
 import 'package:circle/constant.dart';
 import 'package:circle/core/utils/assets.dart';
 import 'package:circle/core/utils/styles.dart';
+import 'package:circle/feature/products/presentation/view/widgets/add_basket_container.dart';
+import 'package:circle/feature/products/presentation/view/widgets/custom_container_price.dart';
 import 'package:flutter/material.dart';
 
 class DetailsProductBody extends StatelessWidget {
@@ -41,9 +43,13 @@ class DetailsProductBody extends StatelessWidget {
                   softWrap: true,
                   style: Styles.textStyle12,
                 ),
+                CustomContainerPrice(),
               ],
             ),
           ),
+          const Spacer(),
+
+          const AddBasketContainer()
         ],
       ),
     );

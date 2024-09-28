@@ -1,4 +1,5 @@
 import 'package:circle/feature/products/presentation/view/widgets/List_View_des_product.dart';
+import 'package:circle/feature/products/presentation/view/widgets/add_basket_container.dart';
 import 'package:circle/feature/products/presentation/view/widgets/category_section.dart';
 import 'package:circle/feature/products/presentation/view/widgets/custom_search_text_feild.dart';
 import 'package:circle/feature/products/presentation/view/widgets/element_product_grad_view.dart';
@@ -18,7 +19,7 @@ class ProductesViewBody extends StatelessWidget {
           ListViewAllProducts(),
           ListViewDesProduct(),
           Spacer(),
-          ElementProductGradView()
+          ElementProductGradView(),
         ],
       ),
     );
