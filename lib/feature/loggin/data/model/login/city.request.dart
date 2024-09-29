@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'city.error.model.g.dart';
+part 'city.request.g.dart';
 
 @JsonSerializable()
 class City {

@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'city.error.model.dart';
+import 'city.request.dart';
 
-part 'user.error.model.g.dart';
+part 'user.request.g.dart';
 
 @JsonSerializable()
 class User {

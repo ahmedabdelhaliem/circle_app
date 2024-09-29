@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'city.error.model.dart';
+part of 'city.request.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
