@@ -3,9 +3,7 @@ import 'package:circle/core/utils/assets.dart';
 import 'package:circle/core/utils/styles.dart';
 import 'package:circle/core/widgets/show_dilog.dart';
 import 'package:circle/feature/profile/presentation/view/widgets/custom_row_setting.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingProfile extends StatefulWidget {
   const SettingProfile({super.key});

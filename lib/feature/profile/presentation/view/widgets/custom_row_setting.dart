@@ -1,7 +1,6 @@
 import 'package:circle/core/utils/styles.dart';
 import 'package:circle/core/widgets/show_dilog.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class CustomRowSetting extends StatelessWidget {
   const CustomRowSetting({

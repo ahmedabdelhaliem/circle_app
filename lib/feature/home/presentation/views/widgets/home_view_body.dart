@@ -1,10 +1,11 @@
 import 'package:circle/feature/home/presentation/views/widgets/custom_bottom_appber.dart';
+import 'package:circle/feature/home/presentation/views/widgets/custom_list_view_Slider_bloc_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:circle/feature/home/presentation/views/widgets/New_Products_grid_view.dart';
 import 'package:circle/feature/home/presentation/views/widgets/custom_row_section.dart';
 import 'package:circle/feature/home/presentation/views/widgets/sections_catigory_grid_view.dart';
 import 'package:circle/feature/home/presentation/views/widgets/custom_appbar.dart';
-import 'package:circle/feature/home/presentation/views/widgets/custom_list_view_images.dart';
+import 'package:circle/feature/home/presentation/views/widgets/custom_list_view_Slider.dart';
 import 'package:circle/feature/home/presentation/views/widgets/searchtext_feild.dart';
 // Assuming kRed is defined here
 
@@ -40,7 +41,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           SizedBox(height: 16),
           SizedBox(
             height: 200,
-            child: CustomListViewImages(),
+            child: CustomListViewSliderBlocBuilder(),
           ),
           CustomRowSection(text: 'الاقسام'),
           SizedBox(height: 12),

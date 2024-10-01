@@ -1,5 +1,3 @@
-import 'package:circle/constant.dart';
-import 'package:circle/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class DescrapitionCategory extends StatelessWidget {

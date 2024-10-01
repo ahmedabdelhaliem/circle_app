@@ -1,5 +1,4 @@
 import 'package:circle/feature/category/presentation/view/widget/custom_category_section_list_view.dart';
-import 'package:circle/feature/category/presentation/view/widget/descrapition_category.dart';
 import 'package:circle/feature/category/presentation/view/widget/list_view_des_cat.dart';
 import 'package:flutter/material.dart';
 

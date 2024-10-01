@@ -1,14 +1,10 @@
-import 'package:circle/core/function/showSnack_bar.dart';
-import 'package:circle/core/utils/App_router.dart';
 import 'package:circle/core/utils/assets.dart';
 import 'package:circle/core/utils/styles.dart';
-import 'package:circle/feature/loggin/presentation/views/widgets/cutom_elevation_botton.dart';
 import 'package:circle/feature/loggin/presentation/views/widgets/login_view_body_cubit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:circle/feature/loggin/presentation/views/widgets/custom_text_field.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({
