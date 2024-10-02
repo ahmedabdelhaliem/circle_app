@@ -1,6 +1,6 @@
 import 'package:circle/core/utils/api_service.dart';
 import 'package:circle/core/utils/locator.dart';
-import 'package:circle/feature/home/data/home_remote_data_source.dart/home_remote_data_source.dart';
+import 'package:circle/feature/home/data/model/home_remote_data_source.dart/home_remote_data_source.dart';
 import 'package:circle/feature/home/data/repo/home_repo_impl.dart';
 import 'package:circle/feature/home/presentation/manager/cubit/fetch_slider_cubit_cubit.dart';
 import 'package:circle/feature/home/presentation/views/widgets/home_view_body.dart';

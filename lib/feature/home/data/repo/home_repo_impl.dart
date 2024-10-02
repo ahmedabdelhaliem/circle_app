@@ -1,5 +1,5 @@
 import 'package:circle/core/error/failure.dart';
-import 'package:circle/feature/home/data/home_remote_data_source.dart/home_remote_data_source.dart';
+import 'package:circle/feature/home/data/model/home_remote_data_source.dart/home_remote_data_source.dart';
 import 'package:circle/feature/home/data/image_slider/image_slider.dart';
 import 'package:dartz/dartz.dart'; // استيراد مكتبة dartz لاستخدام Either
 
