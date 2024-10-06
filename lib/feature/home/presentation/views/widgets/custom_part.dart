@@ -1,9 +1,11 @@
-import 'package:circle/core/utils/assets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:circle/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomPart extends StatelessWidget {
-  const CustomPart({super.key});
+  const CustomPart({super.key, required this.image, required this.title});
+  final String image;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +16,15 @@ class CustomPart extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min, // لتصغير الحجم بحيث يناسب المحتويات
           children: [
-            Image.asset(
-              Assets.icon, // مسار الصورة
-              width: 50, // تحديد عرض الصورة
-              height: 50, // تحديد ارتفاع الصورة
-              fit: BoxFit.cover, // لضبط طريقة عرض الصورة
+            CachedNetworkImage(
+              imageUrl: image,
+              fit: BoxFit.fill,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
             const SizedBox(height: 10), // إضافة مسافة بين الصورة والنص
-            const Text(
-              'منتجات\nالعناية', // النص مع فاصل سطر لجعل الكلمات فوق بعضها البعض
+            Text(
+              title, // النص مع فاصل سطر لجعل الكلمات فوق بعضها البعض
               textAlign: TextAlign.center, // لجعل النص في المنتصف
               style: Styles.textStyle16,
             ),

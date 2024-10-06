@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:circle/feature/home/data/image_slider/image_slider.dart';
+import 'package:circle/feature/home/domain/entity/slider_entity/slider_entity.dart';
 import 'package:flutter/material.dart';
 
 class CustomListViewSlider extends StatelessWidget {
   const CustomListViewSlider({super.key, required this.sliderImage});
 
-  final ImageSlider sliderImage;
+  final List<SliderEntity> sliderImage;
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +16,13 @@ class CustomListViewSlider extends StatelessWidget {
         width: 343,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount:
-              sliderImage.data?.slider?.length ?? 0, // التعامل مع nullable list
+          itemCount: sliderImage.length, // التعامل مع nullable list
           itemBuilder: (BuildContext context, int index) {
-            final slider =
-                sliderImage.data?.slider?[index].image; // الوصول إلى كل عنصر
+            // الوصول إلى كل عنصر
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
-              child: CustomSlider(image: slider), // تمرير الصورة المناسبة
+              child: CustomSlider(
+                  image: sliderImage[index].image), // تمرير الصورة المناسبة
             );
           },
         ),

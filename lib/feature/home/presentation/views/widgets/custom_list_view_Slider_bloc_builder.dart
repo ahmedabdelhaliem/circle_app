@@ -17,7 +17,7 @@ class CustomListViewSliderBlocBuilder extends StatelessWidget {
         } else if (state is FetchSliderCubitFailure) {
           return Text(state.errorMessage);
         }
-        return const CircularProgressIndicator();
+        return const Text('error');
       },
     );
   }

@@ -1,22 +1,60 @@
 import 'package:circle/core/error/failure.dart';
-import 'package:circle/feature/home/data/model/home_remote_data_source.dart/home_remote_data_source.dart';
-import 'package:circle/feature/home/data/image_slider/image_slider.dart';
-import 'package:dartz/dartz.dart'; // استيراد مكتبة dartz لاستخدام Either
+import 'package:circle/feature/home/data/data_source.dart/home_remote_data_source.dart/home_local_data_source.dart';
+import 'package:circle/feature/home/data/data_source.dart/home_remote_data_source.dart/home_remote_data_source.dart';
+import 'package:circle/feature/home/domain/entity/category_entity/category_entity.dart';
+import 'package:circle/feature/home/domain/entity/slider_entity/slider_entity.dart';
+import 'package:circle/feature/home/domain/repo/home_repo.dart';
+import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
-class HomeRepoImpl {
+class HomeRepoImpl extends HomeRepo {
+  final HomeLocalDataSourceImpl homeLocalDataSourceImpl;
   final HomeRemoteDataSource homeRemoteDataSource;
 
-  HomeRepoImpl(this.homeRemoteDataSource);
+  HomeRepoImpl(
+      {required this.homeLocalDataSourceImpl,
+      required this.homeRemoteDataSource});
+  @override
+  Future<Either<Failure, List<CategoryEntity>>> fetchCategory() async {
+    List<CategoryEntity> category;
 
-  Future<Either<Failure, ImageSlider>> fetchData() async {
     try {
-      // استدعاء بيانات الـ Slider من مصدر البيانات البعيد
-      var slideImage = await homeRemoteDataSource.fetchImageSlider();
-      // في حالة النجاح، نُرجع Right مع البيانات
-      return Right(slideImage);
+      category = homeLocalDataSourceImpl.fetchCategory();
+      if (category.isNotEmpty) {
+        return right(category);
+      }
+      category = await homeRemoteDataSource.fetchCategory();
+      return right(category);
     } catch (e) {
-      // في حالة الفشل، نُرجع Left مع Failure مع رسالة توضيحية
-      return Left(ServerFailure(message: 'Error fetching slider data: $e'));
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e)); // TODO
+      }
+      return left(ServerFailure(message: e.toString()));
     }
+  }
+
+  @override
+  Future<Either<Failure, List<SliderEntity>>> fetchImageSlider() async {
+    List<SliderEntity> slider;
+    try {
+      slider = homeLocalDataSourceImpl.fetchImageSlider();
+      if (slider.isNotEmpty) {
+        return right(slider);
+      }
+      slider = await homeRemoteDataSource.fetchImageSlider();
+      return right(slider);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(message: e.toString()));
+      // TODO
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<CategoryEntity>>> fetchLastProduct() {
+    // TODO: implement fetchLastProduct
+    throw UnimplementedError();
   }
 }

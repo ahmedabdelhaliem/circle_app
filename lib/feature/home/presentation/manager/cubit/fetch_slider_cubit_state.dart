@@ -14,7 +14,7 @@ final class FetchSliderCubitFailure extends FetchSliderCubitState {
 }
 
 final class FetchSliderCubitSuccess extends FetchSliderCubitState {
-  final ImageSlider item;
+  final List<SliderEntity> item;
 
   FetchSliderCubitSuccess({required this.item});
 }

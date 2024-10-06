@@ -1,11 +1,17 @@
+import 'package:circle/feature/home/domain/entity/slider_entity/slider_entity.dart';
+
 import 'data.dart';
 
-class ImageSlider {
+class ImageSlider extends SliderEntity {
   Data? data;
   String? message;
   int? code;
 
-  ImageSlider({this.data, this.message, this.code});
+  ImageSlider({this.data, this.message, this.code})
+      : super(
+            image: data?.slider?.isNotEmpty == true
+                ? data!.slider!.first.image ?? ''
+                : '');
 
   factory ImageSlider.fromJson(Map<String, dynamic> json) => ImageSlider(
         data: json['data'] == null
